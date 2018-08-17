@@ -1,9 +1,9 @@
+import org.apache.spark.ml.Pipeline
 import org.apache.spark.ml.evaluation.RegressionEvaluator
 import org.apache.spark.ml.feature.{VectorAssembler, VectorIndexer}
-import org.apache.spark.ml.Pipeline
 import org.apache.spark.ml.regression.LinearRegression
 import org.apache.spark.ml.tuning.{CrossValidator, ParamGridBuilder}
-import org.apache.spark.sql._
+import org.apache.spark.sql.SparkSession
 import org.apache.spark.{SparkConf, SparkContext}
 
 object BikeSharingHourPredictionAndEvaluation {
@@ -88,5 +88,3 @@ object BikeSharingHourPredictionAndEvaluation {
     println("So the model's r2 is: " + highestR2)
   }
 }
-
-//0.3906404546327178  201808142011

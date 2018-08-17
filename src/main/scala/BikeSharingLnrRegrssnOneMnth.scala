@@ -28,22 +28,21 @@ object BikeSharingLnrRegrssnOneMnth {
 
     val data00 = dataRDDNoHeader.map(line => {
       val arr = line.split(",")
-        (arr(4).toDouble, arr(3).toDouble, arr(5).toDouble, arr(8).toDouble, arr(9).toDouble, arr(10).toDouble,
+        (arr(4).toDouble, arr(3).toDouble, arr(5).toDouble, arr(8).toDouble, arr(9).toDouble,
         arr(11).toDouble, arr(12).toDouble, arr(13).toDouble, arr(16).toDouble)
       }).filter(row => row._1 == 6.0).cache()
 
-    val sortHrList = sortHr(data00.map(row => (row._3, row._10)))
-    val sortWthrList = sortWthr(data00.map(row => (row._5, row._10)))
-    val sortTempList = sortTemp(data00.map(row => (row._6, row._10)))
-    val sortAtempList = sortAtemp(data00.map(row => (row._7, row._10)))
-    val sortHumList = sortHum(data00.map(row => (row._8, row._10)))
-    val sortWindSpList = sortWndSp(data00.map(row => (row._9, row._10)))
+    val sortHrList = sortHr(data00.map(row => (row._3, row._9)))
+    val sortWthrList = sortWthr(data00.map(row => (row._5, row._9)))
+    val sortAtempList = sortAtemp(data00.map(row => (row._6, row._9)))
+    val sortHumList = sortHum(data00.map(row => (row._7, row._9)))
+    val sortWindSpList = sortWndSp(data00.map(row => (row._8, row._9)))
 
     val data0 = data00.map(row=>(row._2, rerangeHrsAccordToCnt1(row._3)(sortHrList), row._4,
                             rerangewthrAccordToCnt1(row._5)(sortWthrList),
-                            rerangeAtempAccordToCnt1(row._7)(sortAtempList),
-                            rerangeHumAccordToCnt1(row._8)(sortHumList),
-                            rerangeWndSpAccordToCnt1(row._9)(sortWindSpList), row._10))
+                            rerangeAtempAccordToCnt1(row._6)(sortAtempList),
+                            rerangeHumAccordToCnt1(row._7)(sortHumList),
+                            rerangeWndSpAccordToCnt1(row._8)(sortWindSpList), row._9))
 
     val data = data0.toDF()
 
