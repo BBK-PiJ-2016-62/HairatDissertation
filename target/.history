@@ -1,0 +1,2 @@
+;reload; set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download" ;*/*:dumpStructureTo C:/Users/Eric/AppData/Local/Temp/sbt-structure.xml; session clear-all
+all {file:/D:/SparkMachineLearning/HairatDissertation/}hairatdissertation/products {file:/D:/SparkMachineLearning/HairatDissertation/}hairatdissertation/test:products

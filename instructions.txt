@@ -1,0 +1,17 @@
+RFM Analysis
+RECENCY - Customer segmented base on how recent they shop
+FREQUENCY - How frequent they buy
+MONETARY VALUR - How much they spent on shopping
+
+201808071957
+spark phython rfm: www.awesomestats.in/spark-customers-rfm-analysis/
+
+https://blogs.technet.microsoft.com/machinelearning/2016/05/31/rfm-a-simple-and-powerful-approach-to-event-modeling/
+
+https://www.kaggle.com/snehanshu17/retail/notebook
+
+201808111732
+k-Nearest Neighbors algorithm on Spark:
+https://github.com/saurfang/spark-knn
+
+https://archive.ics.uci.edu/ml/datasets.html?area=&att=&format=&numAtt=&numIns=&sort=nameUp&task=reg&type=&view=table
