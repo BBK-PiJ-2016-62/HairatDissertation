@@ -4,7 +4,7 @@
 		module="hairatdissertation$sources_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20180817223931"
+		publication="20180819154310"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>

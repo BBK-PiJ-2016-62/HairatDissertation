@@ -88,3 +88,5 @@ object BikeSharingHourPredictionAndEvaluation {
     println("So the model's r2 is: " + highestR2)
   }
 }
+
+//The model's r2 is: 0.3906404546327178
